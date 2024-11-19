@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var headline: UILabel!
+
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     let eggTimes = [
-        "Soft": 300,
+        "Soft": 3,
         "Medium": 420,
         "Hard": 720
     ]
@@ -31,13 +35,19 @@ class ViewController: UIViewController {
         
         activeTimer?.invalidate()
         
+        progressBar.progress = 0
+        
         var countdown = start
-        print(countdown, " seconds.")
+        self.headline.text = String(countdown)
         activeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             countdown -= 1
-            print(countdown, " seconds.")
+            let progress: Float = Float((start - countdown)) / Float(start)
+            self.progressBar.progress = progress
             if (countdown == 0) {
+                self.headline.text = "Done!"
                 timer.invalidate()
+            } else {
+                self.headline.text = String(countdown)
             }
         }
     }
