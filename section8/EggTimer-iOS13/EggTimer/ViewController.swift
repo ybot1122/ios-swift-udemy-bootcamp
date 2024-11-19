@@ -11,25 +11,34 @@ import UIKit
 class ViewController: UIViewController {
     
     let eggTimes = [
-        "Soft": 5,
-        "Medium": 7,
-        "Hard": 12
+        "Soft": 300,
+        "Medium": 420,
+        "Hard": 720
     ]
     
+    var activeTimer: Timer?
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        let hardness = sender.currentTitle
+        let hardness: String = sender.currentTitle ?? "unknown"
         
-        switch hardness {
-        case "Soft":
-            print(eggTimes["Soft"]!)
-        case "Medium":
-            print(eggTimes["Medium"]!)
-        case "Hard":
-            print(eggTimes["Hard"]!)
-        default:
-            print("idk")
-        }
+        let timeInSec = eggTimes[hardness]!
+        
+        startTimer(start: timeInSec)
     }
     
-
+    
+    func startTimer(start: Int) {
+        
+        activeTimer?.invalidate()
+        
+        var countdown = start
+        print(countdown, " seconds.")
+        activeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            countdown -= 1
+            print(countdown, " seconds.")
+            if (countdown == 0) {
+                timer.invalidate()
+            }
+        }
+    }
 }
