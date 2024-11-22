@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="500" verticalCompressionResistancePriority="1000" ambiguous="YES" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-jB-Wwb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="500" verticalCompressionResistancePriority="1000" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-jB-Wwb">
                                 <rect key="frame" x="0.0" y="794" width="414" height="102"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-by-E7F">
@@ -74,11 +74,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="80O-Qf-suq"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B20-uo-A2w"/>
                             <constraint firstAttribute="bottom" secondItem="eGL-jB-Wwb" secondAttribute="bottom" id="E3D-v1-q51"/>
                             <constraint firstAttribute="trailing" secondItem="Gvb-by-E7F" secondAttribute="trailing" constant="25" id="KsA-dd-W3g"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Yfw-SY-kmr"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zbo-aD-waL"/>
+                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gPR-Ow-xZ8"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hMV-OL-P2u"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sRd-48-xux"/>
                         </constraints>

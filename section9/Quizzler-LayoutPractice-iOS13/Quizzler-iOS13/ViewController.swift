@@ -65,10 +65,7 @@ class ViewController: UIViewController {
         self.questionLabel.text = self.quiz[self.questionNumber].text
         self.trueButton.backgroundColor = UIColor.clear
         self.falseButton.backgroundColor = UIColor.clear
-        self.progressBar.setProgress(Float(self.questionNumber) / Float(self.quiz.count - 1), animated: true)
-        
-        print ("Currently on \(questionNumber) out of \(quiz.count - 1)")
-        print(progressBar.progress)
+        self.progressBar.setProgress(Float(self.questionNumber + 1) / Float(self.quiz.count), animated: true)        
     }
     
 }
