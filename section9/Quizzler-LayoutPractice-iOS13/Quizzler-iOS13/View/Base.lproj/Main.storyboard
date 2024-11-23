@@ -20,20 +20,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="500" verticalCompressionResistancePriority="1000" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-jB-Wwb">
                                 <rect key="frame" x="0.0" y="794" width="414" height="102"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJp-Dl-If3">
-                                <rect key="frame" x="10" y="58" width="73" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJp-Dl-If3">
+                                <rect key="frame" x="10" y="58" width="394" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-by-E7F">
-                                <rect key="frame" x="25" y="92" width="364" height="720"/>
+                                <rect key="frame" x="25" y="92" width="364" height="740"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="giX-aB-Jj7">
-                                        <rect key="frame" x="15.5" y="0.0" width="333" height="404"/>
+                                        <rect key="frame" x="15.5" y="0.0" width="333" height="516"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="404"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="516"/>
                                                 <string key="text">Question Text Question Text Question Text Question Text Question Text Question Text Question Text Question Text Question Text Question Text </string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,11 +41,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eST-VM-eaz" userLabel="Choices Stack View">
-                                        <rect key="frame" x="0.0" y="404" width="364" height="68"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eST-VM-eaz" userLabel="Choices Stack View">
+                                        <rect key="frame" x="21" y="516" width="322" height="224"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-Hl-IRe" userLabel="Choice 1">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="68"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Choice 1" backgroundImage="Rectangle">
@@ -56,7 +56,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-CQ-L83" userLabel="Choice 2">
-                                                <rect key="frame" x="124.5" y="0.0" width="115" height="68"/>
+                                                <rect key="frame" x="0.0" y="78" width="322" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Choice 2" backgroundImage="Rectangle">
@@ -67,7 +67,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-vQ-GyC" userLabel="Choice 3">
-                                                <rect key="frame" x="249.5" y="0.0" width="114.5" height="68"/>
+                                                <rect key="frame" x="0.0" y="156" width="322" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Choice 3" backgroundImage="Rectangle">
@@ -79,45 +79,36 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPK-9T-crb">
-                                        <rect key="frame" x="0.0" y="472" width="364" height="248"/>
-                                        <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
-                                                <rect key="frame" x="0.0" y="246.5" width="364" height="2.5"/>
-                                                <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
-                                                </accessibility>
-                                                <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </progressView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="TXm-qh-7Xg" secondAttribute="bottom" id="oes-ys-yWG"/>
-                                            <constraint firstItem="TXm-qh-7Xg" firstAttribute="leading" secondItem="PPK-9T-crb" secondAttribute="leading" id="scB-NQ-4sv"/>
-                                            <constraint firstAttribute="trailing" secondItem="TXm-qh-7Xg" secondAttribute="trailing" id="upp-pG-GXc"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="PPK-9T-crb" firstAttribute="leading" secondItem="Gvb-by-E7F" secondAttribute="leading" id="7Cd-gM-Qap"/>
-                                    <constraint firstAttribute="trailing" secondItem="PPK-9T-crb" secondAttribute="trailing" id="Kre-dB-zxm"/>
-                                </constraints>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
+                                <rect key="frame" x="10" y="850.5" width="394" height="2.5"/>
+                                <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="IJp-Dl-If3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4v9-uc-8na"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="80O-Qf-suq"/>
+                            <constraint firstItem="IJp-Dl-If3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dC-KX-X5s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IJp-Dl-If3" secondAttribute="trailing" symbolic="YES" id="B9A-xO-Xa5"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="E3D-v1-q51"/>
+                            <constraint firstItem="TXm-qh-7Xg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="HrX-K2-uRs"/>
                             <constraint firstItem="IJp-Dl-If3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IFE-MS-x9h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvb-by-E7F" secondAttribute="trailing" constant="25" id="KsA-dd-W3g"/>
+                            <constraint firstItem="TXm-qh-7Xg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="S4j-yr-QdB"/>
                             <constraint firstItem="IJp-Dl-If3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="VLA-YB-3QU"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Yfw-SY-kmr"/>
                             <constraint firstItem="Gvb-by-E7F" firstAttribute="top" secondItem="IJp-Dl-If3" secondAttribute="bottom" constant="10" id="Zbo-aD-waL"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="gPR-Ow-xZ8"/>
-                            <constraint firstItem="Gvb-by-E7F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="sRd-48-xux"/>
+                            <constraint firstItem="Gvb-by-E7F" firstAttribute="bottom" secondItem="TXm-qh-7Xg" secondAttribute="bottom" constant="-20" id="sRd-48-xux"/>
+                            <constraint firstItem="TXm-qh-7Xg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uMx-PC-pF9"/>
                         </constraints>
                     </view>
                     <connections>

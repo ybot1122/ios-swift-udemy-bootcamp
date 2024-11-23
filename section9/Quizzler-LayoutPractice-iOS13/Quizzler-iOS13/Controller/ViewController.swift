@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        choice1.titleLabel?.adjustsFontSizeToFitWidth = true
+        choice2.titleLabel?.adjustsFontSizeToFitWidth = true
+        choice3.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         setChoicesAxis()
         updateUI()
     }
