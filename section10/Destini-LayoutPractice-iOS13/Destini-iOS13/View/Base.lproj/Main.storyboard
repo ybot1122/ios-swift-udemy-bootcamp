@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,13 +16,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-1z-Hjw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-fe-rgp">
+                                <rect key="frame" x="107" y="398" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E9o-IN-aKf"/>
+                                    <constraint firstAttribute="width" constant="200" id="jXL-HY-93P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" backgroundImage="choice1Background"/>
+                                <connections>
+                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tS4-yb-hTK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-YR-8BU" userLabel="Choice2 Btn">
+                                <rect key="frame" x="107" y="548" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TlJ-Kh-GMt"/>
+                                    <constraint firstAttribute="width" constant="200" id="Z2B-D9-E3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" backgroundImage="choice2Background"/>
+                                <connections>
+                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cc-HM-COU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-Xd-h4i" userLabel="Story Text">
+                                <rect key="frame" x="10" y="68" width="394" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GvO-fe-rgp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3et-9L-xV8"/>
+                            <constraint firstItem="fAM-1z-Hjw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E8S-SM-HJh"/>
+                            <constraint firstItem="bvh-YR-8BU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="EOs-KX-lxO"/>
+                            <constraint firstItem="A9J-Xd-h4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G0V-cB-RU1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A9J-Xd-h4i" secondAttribute="trailing" constant="10" id="LMk-b3-Dde"/>
+                            <constraint firstAttribute="bottom" secondItem="fAM-1z-Hjw" secondAttribute="bottom" id="SFx-gy-Z8e"/>
+                            <constraint firstItem="fAM-1z-Hjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SmI-Rd-ccS"/>
+                            <constraint firstItem="GvO-fe-rgp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSJ-1j-VHR"/>
+                            <constraint firstItem="bvh-YR-8BU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tEr-xH-Ty1"/>
+                            <constraint firstAttribute="trailing" secondItem="fAM-1z-Hjw" secondAttribute="trailing" id="vEK-tC-X14"/>
+                            <constraint firstItem="A9J-Xd-h4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xBT-K4-u02"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1Btn" destination="GvO-fe-rgp" id="YFO-X9-2tb"/>
+                        <outlet property="choice2Btn" destination="bvh-YR-8BU" id="CXl-uD-3et"/>
+                        <outlet property="storyLabel" destination="A9J-Xd-h4i" id="wUu-8x-26x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="958" height="1793"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
