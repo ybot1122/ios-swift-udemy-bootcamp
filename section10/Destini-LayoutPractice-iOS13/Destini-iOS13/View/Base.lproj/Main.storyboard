@@ -21,11 +21,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-fe-rgp">
-                                <rect key="frame" x="10" y="398" width="394" height="100"/>
+                                <rect key="frame" x="10" y="473" width="394" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="E9o-IN-aKf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" backgroundImage="choice1Background"/>
                                 <connections>
@@ -33,19 +34,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-YR-8BU" userLabel="Choice2 Btn">
-                                <rect key="frame" x="10" y="548" width="394" height="100"/>
+                                <rect key="frame" x="10" y="598" width="394" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TlJ-Kh-GMt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" backgroundImage="choice2Background"/>
                                 <connections>
                                     <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cc-HM-COU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-Xd-h4i" userLabel="Story Text">
-                                <rect key="frame" x="10" y="68" width="394" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-Xd-h4i" userLabel="Story Text">
+                                <rect key="frame" x="10" y="68" width="394" height="385"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,17 +56,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GvO-fe-rgp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3et-9L-xV8"/>
+                            <constraint firstItem="GvO-fe-rgp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75" id="3et-9L-xV8"/>
                             <constraint firstItem="fAM-1z-Hjw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E8S-SM-HJh"/>
-                            <constraint firstItem="bvh-YR-8BU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="EOs-KX-lxO"/>
+                            <constraint firstItem="bvh-YR-8BU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="EOs-KX-lxO"/>
                             <constraint firstItem="bvh-YR-8BU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="F2k-Yv-S1M"/>
                             <constraint firstItem="A9J-Xd-h4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G0V-cB-RU1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A9J-Xd-h4i" secondAttribute="trailing" constant="10" id="LMk-b3-Dde"/>
                             <constraint firstAttribute="bottom" secondItem="fAM-1z-Hjw" secondAttribute="bottom" id="SFx-gy-Z8e"/>
                             <constraint firstItem="fAM-1z-Hjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SmI-Rd-ccS"/>
+                            <constraint firstItem="A9J-Xd-h4i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="UYF-RZ-CQL"/>
+                            <constraint firstItem="A9J-Xd-h4i" firstAttribute="bottom" secondItem="GvO-fe-rgp" secondAttribute="top" constant="-20" id="aeq-p6-OYn"/>
                             <constraint firstItem="bvh-YR-8BU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bvq-89-TBb"/>
                             <constraint firstItem="GvO-fe-rgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="cRl-ZJ-lHK"/>
-                            <constraint firstAttribute="trailing" secondItem="GvO-fe-rgp" secondAttribute="trailing" constant="10" id="k4U-XX-0nR"/>
+                            <constraint firstItem="GvO-fe-rgp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-10" id="k4U-XX-0nR"/>
                             <constraint firstAttribute="trailing" secondItem="fAM-1z-Hjw" secondAttribute="trailing" id="vEK-tC-X14"/>
                             <constraint firstItem="A9J-Xd-h4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xBT-K4-u02"/>
                         </constraints>
