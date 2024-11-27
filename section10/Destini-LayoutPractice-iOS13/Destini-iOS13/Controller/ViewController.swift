@@ -8,13 +8,7 @@
 
 import UIKit
 
-let stories = [
-    Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right."),
-    Story(title: "You see a tiger.", choice1: "Shout for help.", choice2: "Play dead."),
-    Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps."),
-]
-
-var currentStoryIndex = 0
+var brain: StoryBrain = StoryBrain()
 
 class ViewController: UIViewController {
     
@@ -24,7 +18,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateUI()
 
     }
@@ -32,19 +25,15 @@ class ViewController: UIViewController {
     @IBAction func choiceMade(_ sender: UIButton) {
         print(sender.titleLabel?.text! ?? "unknown button")
 
-        if (sender.titleLabel?.text! == stories[currentStoryIndex].choice1) {
-            currentStoryIndex = 1
-        } else {
-            currentStoryIndex = 2
-        }
-        
+        brain.nextStory(userChoice: (sender.titleLabel?.text!)!)
         updateUI()
     }
     
     func updateUI() {
-        storyLabel.text = stories[currentStoryIndex].title
-        choice1Btn.setTitle(stories[currentStoryIndex].choice1, for: .normal)
-        choice2Btn.setTitle(stories[currentStoryIndex].choice2, for: .normal)
+        let currentStory = brain.getCurrentStory()
+        storyLabel.text = currentStory.title
+        choice1Btn.setTitle(currentStory.choice1, for: .normal)
+        choice2Btn.setTitle(currentStory.choice2, for: .normal)
     }
     
 }
