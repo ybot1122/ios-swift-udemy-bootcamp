@@ -14,6 +14,8 @@ let stories = [
     Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps."),
 ]
 
+var currentStoryIndex = 0
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var choice1Btn: UIButton!
@@ -23,15 +25,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("loaded")
-        
-        storyLabel.text = stories[0].title
-        choice1Btn.setTitle(stories[0].choice1, for: .normal)
-        choice2Btn.setTitle(stories[0].choice2, for: .normal)
+        updateUI()
+
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
         print(sender.titleLabel?.text! ?? "unknown button")
+
+        if (sender.titleLabel?.text! == stories[currentStoryIndex].choice1) {
+            currentStoryIndex = 1
+        } else {
+            currentStoryIndex = 2
+        }
+        
+        updateUI()
+    }
+    
+    func updateUI() {
+        storyLabel.text = stories[currentStoryIndex].title
+        choice1Btn.setTitle(stories[currentStoryIndex].choice1, for: .normal)
+        choice2Btn.setTitle(stories[currentStoryIndex].choice2, for: .normal)
     }
     
 }
