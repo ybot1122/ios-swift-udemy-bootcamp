@@ -26,21 +26,18 @@ struct StoryBrain {
           choice1: "I love Elton John! Hand him the cassette tape.", choice1Destination: 5,
           choice2: "It's him or me! You take the knife and stab him.", choice2Destination: 4
       ),
-      Story(
-          title: "What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?",
-          choice1: "The", choice1Destination: 0,
-          choice2: "End", choice2Destination: 0
-      ),
-      Story(
-          title: "As you smash through the guardrail and careen towards the jagged rocks below you reflect on the dubious wisdom of stabbing someone while they are driving a car you are in.",
-          choice1: "The", choice1Destination: 0,
-          choice2: "End", choice2Destination: 0
-      ),
-      Story(
-          title: "You bond with the murderer while crooning verses of 'Can you feel the love tonight'. He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: 'Try the pier.'",
-          choice1: "The", choice1Destination: 0,
-          choice2: "End", choice2Destination: 0
-      )
+        Story(
+            title: "What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?",
+            choice1: "Start Over", choice1Destination: 0
+        ),
+        Story(
+            title: "As you smash through the guardrail and careen towards the jagged rocks below you reflect on the dubious wisdom of stabbing someone while they are driving a car you are in.",
+            choice1: "Start Over", choice1Destination: 0
+        ),
+        Story(
+            title: "You bond with the murderer while crooning verses of 'Can you feel the love tonight'. He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: 'Try the pier.'",
+            choice1: "Start Over", choice1Destination: 0
+        )
     ]
 
     var currentStoryIndex: Int = 0
@@ -49,10 +46,10 @@ struct StoryBrain {
     }
 
     mutating func nextStory(userChoice: String) {
-        if (userChoice == stories[currentStoryIndex].choice1) {
+        if (userChoice == stories[currentStoryIndex].choice1 || stories[currentStoryIndex].choice2Destination == nil) {
             currentStoryIndex = stories[currentStoryIndex].choice1Destination
         } else {
-            currentStoryIndex = stories[currentStoryIndex].choice2Destination
+            currentStoryIndex = stories[currentStoryIndex].choice2Destination!
         }
     }
     

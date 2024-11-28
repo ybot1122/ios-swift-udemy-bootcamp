@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         storyLabel.text = currentStory.title
         choice1Btn.setTitle(currentStory.choice1, for: .normal)
         choice2Btn.setTitle(currentStory.choice2, for: .normal)
+        choice2Btn.isHidden = currentStory.choice2 == nil
     }
     
 }
