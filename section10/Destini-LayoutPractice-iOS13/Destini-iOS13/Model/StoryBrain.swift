@@ -27,8 +27,8 @@ struct StoryBrain {
           choice2: "It's him or me! You take the knife and stab him.", choice2Destination: 4
       ),
         Story(
-            title: "What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?",
-            choice1: "Start Over", choice1Destination: 0
+            title: "Here is a Whopper.",
+            choice1: "Start Over", choice1Destination: 0, image: "whopper"
         ),
         Story(
             title: "As you smash through the guardrail and careen towards the jagged rocks below you reflect on the dubious wisdom of stabbing someone while they are driving a car you are in.",

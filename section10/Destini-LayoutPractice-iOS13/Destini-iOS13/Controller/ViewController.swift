@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice1Btn: UIButton!
     @IBOutlet weak var choice2Btn: UIButton!
     @IBOutlet weak var storyLabel: UILabel!
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         choice1Btn.setTitle(currentStory.choice1, for: .normal)
         choice2Btn.setTitle(currentStory.choice2, for: .normal)
         choice2Btn.isHidden = currentStory.choice2 == nil
+        imageView.image = UIImage(named: currentStory.image ?? "")
+        imageView.isHidden = currentStory.image == nil
     }
     
 }

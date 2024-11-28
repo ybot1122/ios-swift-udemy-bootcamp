@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,54 +20,59 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-1z-Hjw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-fe-rgp">
-                                <rect key="frame" x="10" y="473" width="394" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="E9o-IN-aKf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="choice1Background"/>
-                                <connections>
-                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tS4-yb-hTK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-YR-8BU" userLabel="Choice2 Btn">
-                                <rect key="frame" x="10" y="598" width="394" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="TlJ-Kh-GMt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="choice2Background"/>
-                                <connections>
-                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cc-HM-COU"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Vdh-8U-w0Q">
+                                <rect key="frame" x="10" y="627" width="394" height="225"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-fe-rgp">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="E9o-IN-aKf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" backgroundImage="choice1Background"/>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tS4-yb-hTK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-YR-8BU" userLabel="Choice2 Btn">
+                                        <rect key="frame" x="0.0" y="125" width="394" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="TlJ-Kh-GMt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" backgroundImage="choice2Background"/>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cc-HM-COU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-Xd-h4i" userLabel="Story Text">
-                                <rect key="frame" x="10" y="68" width="394" height="385"/>
+                                <rect key="frame" x="10" y="68" width="394" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-pC-l5X">
+                                <rect key="frame" x="102" y="326" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GvO-fe-rgp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75" id="3et-9L-xV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vdh-8U-w0Q" secondAttribute="bottom" constant="10" id="07L-As-Mf0"/>
                             <constraint firstItem="fAM-1z-Hjw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E8S-SM-HJh"/>
-                            <constraint firstItem="bvh-YR-8BU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="EOs-KX-lxO"/>
-                            <constraint firstItem="bvh-YR-8BU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="F2k-Yv-S1M"/>
                             <constraint firstItem="A9J-Xd-h4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G0V-cB-RU1"/>
                             <constraint firstAttribute="bottom" secondItem="fAM-1z-Hjw" secondAttribute="bottom" id="SFx-gy-Z8e"/>
                             <constraint firstItem="fAM-1z-Hjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SmI-Rd-ccS"/>
                             <constraint firstItem="A9J-Xd-h4i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="UYF-RZ-CQL"/>
-                            <constraint firstItem="A9J-Xd-h4i" firstAttribute="bottom" secondItem="GvO-fe-rgp" secondAttribute="top" constant="-20" id="aeq-p6-OYn"/>
-                            <constraint firstItem="bvh-YR-8BU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bvq-89-TBb"/>
-                            <constraint firstItem="GvO-fe-rgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="cRl-ZJ-lHK"/>
-                            <constraint firstItem="GvO-fe-rgp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-10" id="k4U-XX-0nR"/>
+                            <constraint firstAttribute="trailing" secondItem="Vdh-8U-w0Q" secondAttribute="trailing" constant="10" id="ZDS-Ra-FrG"/>
+                            <constraint firstItem="Vdh-8U-w0Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="c1d-QZ-ozt"/>
                             <constraint firstAttribute="trailing" secondItem="fAM-1z-Hjw" secondAttribute="trailing" id="vEK-tC-X14"/>
                             <constraint firstItem="A9J-Xd-h4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xBT-K4-u02"/>
                         </constraints>
@@ -75,6 +80,7 @@
                     <connections>
                         <outlet property="choice1Btn" destination="GvO-fe-rgp" id="YFO-X9-2tb"/>
                         <outlet property="choice2Btn" destination="bvh-YR-8BU" id="CXl-uD-3et"/>
+                        <outlet property="imageView" destination="EAU-pC-l5X" id="gcx-Hb-PMa"/>
                         <outlet property="storyLabel" destination="A9J-Xd-h4i" id="wUu-8x-26x"/>
                     </connections>
                 </viewController>
