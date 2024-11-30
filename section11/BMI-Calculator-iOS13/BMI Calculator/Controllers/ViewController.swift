@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,9 +23,13 @@ class ViewController: UIViewController {
         
         let roundedValue1 = (sender.value * 100).rounded() / 100
 
+        if (sender.maximumValue == 200) {
+            weightLabel.text = "\(String(format: "%.0f", roundedValue1))kg"
+        } else {
+            heightLabel.text = String(format: "%.2f", roundedValue1) + "m"
+        }
         
-        print( roundedValue1)
-        
+            
     }
 }
 
