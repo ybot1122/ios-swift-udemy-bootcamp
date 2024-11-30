@@ -16,5 +16,13 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func sliderValChanged(_ sender: UISlider) {
+        
+        let roundedValue1 = (sender.value * 100).rounded() / 100
+
+        
+        print( roundedValue1)
+        
+    }
 }
 
