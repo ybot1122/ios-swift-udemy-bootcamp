@@ -1,13 +1,9 @@
 print("Hello, World!")
 
-let skeleton = Enemy()
-print(skeleton.health)
-skeleton.move()
-skeleton.attack()
+let skeleton = Enemy(health: 100, attackStrength: 10)
 
-let dragon = Dragon()
-dragon.wingSpan = 5
-dragon.attackStrength = 15
-dragon.move()
-dragon.attack()
-dragon.talk(speech: "My claw, my teeth, my wings")
+let skeleton2 = skeleton
+
+skeleton.takeDamage(amount: 10)
+
+print(skeleton2.health)
