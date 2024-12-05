@@ -156,6 +156,9 @@
                                         <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="billTextValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lj3-8T-JpQ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -204,18 +207,19 @@
                         <outlet property="tenPctButton" destination="7y6-Kf-yF0" id="8aa-KM-5kd"/>
                         <outlet property="twentyPctButton" destination="UtR-dU-EKt" id="bUE-Kq-in3"/>
                         <outlet property="zeroPctButton" destination="XzR-0E-Xf7" id="Q8O-UN-G1j"/>
+                        <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResults" id="NiW-mi-wQj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="bJV-Cc-sXH">
             <objects>
-                <viewController id="Dnf-m2-FPm" sceneMemberID="viewController">
+                <viewController id="Dnf-m2-FPm" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNW-gk-FsX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-Te-efL">
@@ -252,7 +256,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-9K-6hu">
-                                <rect key="frame" x="96.666666666666686" y="764" width="200" height="54"/>
+                                <rect key="frame" x="96.666666666666686" y="788" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Lh-eY-3GO"/>
@@ -265,6 +269,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="Dnf-m2-FPm" eventType="touchUpInside" id="l8V-bs-B3z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-bn-sCv">
                                 <rect key="frame" x="50" y="305" width="293" height="117"/>
@@ -289,6 +296,10 @@
                             <constraint firstItem="ZCe-Te-efL" firstAttribute="top" secondItem="DNW-gk-FsX" secondAttribute="top" id="zdY-59-9ry"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="HGt-bn-sCv" id="1JJ-AA-PP4"/>
+                        <outlet property="totalLabel" destination="uLJ-ii-hft" id="2XV-5y-f3j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLi-Eb-NGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
