@@ -1,12 +1,43 @@
 import Foundation
 
+let appID = "tbd"
+
 struct WeatherManager {
-    let url = "https://api.openweathermap.org/data/2.5/weather?appid=43696914022f8b527652ec2306be3e83"
+    let url = "https://api.openweathermap.org/data/2.5/weather?appid=\(appID)"
     
     func fetchWeather(cityName: String){
         
         let weatherUrl = "\(url)&q=\(cityName)"
+                
+        performRequest(urlString: weatherUrl)
+    }
+    
+    func performRequest(urlString: String) {
         
-        print (weatherUrl)
+        // 1. create a url
+        if let url = URL(string: urlString) {
+            // 2. create a url session
+            let session = URLSession(configuration: .default)
+            
+            // 3. give a task
+            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            
+            // 4. start the task
+            task.resume()
+        }
+    }
+    
+    func handle(data: Data?, response: URLResponse?, error: Error?) -> Void {
+        
+        if error != nil {
+            print(error!)
+            return
+        }
+        
+        if let safeData = data {
+            let dataString = String(data: safeData, encoding: .utf8)
+            print(dataString)
+        }
+        
     }
 }
