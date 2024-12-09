@@ -1,6 +1,6 @@
 import Foundation
 
-let appID = "tbd"
+let appID = Bundle.main.object(forInfoDictionaryKey: "WEATHER_MAP_APP_ID") ?? "bad"
 
 struct WeatherManager {
     let url = "https://api.openweathermap.org/data/2.5/weather?appid=\(appID)"
@@ -10,6 +10,8 @@ struct WeatherManager {
         let weatherUrl = "\(url)&q=\(cityName)"
                 
         performRequest(urlString: weatherUrl)
+        
+        print(appID)
     }
     
     func performRequest(urlString: String) {
@@ -36,7 +38,7 @@ struct WeatherManager {
         
         if let safeData = data {
             let dataString = String(data: safeData, encoding: .utf8)
-            print(dataString)
+            print(dataString!)
         }
         
     }
