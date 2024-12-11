@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import CoreLocation
 
 let appID = Bundle.main.object(forInfoDictionaryKey: "WEATHER_MAP_APP_ID") ?? "bad"
 let url = "https://api.openweathermap.org/data/2.5/weather?appid=\(appID)"
@@ -8,6 +9,14 @@ struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
     
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+        
+        let weatherUrl = "\(url)&lat=\(latitude)&lon=\(longitude)"
+        
+        performRequest(with: weatherUrl)
+    }
+
+
     func fetchWeather(cityName: String){
         
         let weatherUrl = "\(url)&q=\(cityName)"
